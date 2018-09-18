@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TEAM 13-2 PAGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="register.css">
+    <title>Registration Page</title>
+    <script>
+        function registration()
+        {
+            if(document.getElementById('fn').value.length>0 && document.getElementById('ln').value.length>0 && document.getElementById('username').value.length>0 && document.getElementById('email').value.length>0 && document.getElementById('password').value.length>0 && document.getElementById('cpassword').value.length>0 &&
+                ( document.getElementById('cpassword').value ==document.getElementById('password').value))
+            {
+                localStorage.setItem('UserName',(document.getElementById('username').value));
+                localStorage.setItem('Password',(document.getElementById('password').value));
+                window.location.href='LoginPage.html';
+            }
+            else
+            {
+                alert('Dear user, you have missed entering few details !');
+            }
+        }
+    </script>
+</head>
+<body style="background-image:url('https://previews.123rf.com/images/mazirama/mazirama1502/mazirama150200111/36268185-registro-rompecabezas-3d-hacer-ilustraci%C3%B3n-con-la-palabra-sobre-fondo-azul.jpg') ; background-size:100% , no-repeat">
+<center>
+    <h1><center><img src="http://sportscommunity.com.au/wp-content/uploads/2015/06/Button-ENTER-Here.jpeg" height="98" alt="Enter your Registration details as Required "></center></h1>
+    <form>
+        <div>
+            <div id="leftDiv">
+                <input id="fn" type="text"  name="firstName" placeholder="First Name:" size="10" value=""/>
+            </div><br>
+            <div id="rightDiv">
+                <input id="ln" type="text" name="lastName" placeholder="Last name:" size="10" value=""/>
+            </div>
+        </div>
+        <div> <input id="username" type="text" name="username" placeholder="UserName:" size="10" ></div>
+        <div>
+            <input id="email" type="email" name="email" placeholder="MailID:" size="10">
+        </div>
+        <div>
+            <input id="password" type="password" name="password12" placeholder="Password:" size="10">
+        </div>
+        <div>
+            <input id="cpassword" type="password" name="password11" placeholder="Confirm Password:" size="10">
+        </div>
+        </div>
+
+        <div>
+            <input id="mobile" type="text"  placeholder="Phone Number:" size="10">
+        </div>
+        <div>
+            DOB : <input id="bday" type="date" name="Date of Birth:" style="width:15%">
+        </div>
+        <div>
+            Gender~ <select id="gender" name="gender" style="width: 9%">
+            <option selected disabled></option>
+            <option>M</option>
+            <option>F</option>
+            <option>Do not wish to identify</option>
+
+        </select>
+        </div>
+        <input type="button" name="Register" value="Register" onclick="registration()"><br><br>
+
+        <input type="button" value="Select" onclick="login()">
+    </form>
+</center>
+</body>

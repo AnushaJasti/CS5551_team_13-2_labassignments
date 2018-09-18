@@ -1,0 +1,36 @@
+select
+{
+    border:solid 1px cornflowerblue;
+    padding:5px;
+}
+body
+{
+    font-family: "Verdana";
+    font-size: SMALL;
+}
+
+input
+{
+    -moz-border-radius: 10px;
+    font-size: large;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding:3px;
+    class:"form-control";
+}
+div
+{
+    class:"form-group";
+    margin:8px;
+}
+#leftDiv{
+    padding-right: 5px;
+    display:table-cell;
+    text-align:right;
+}
+
+#rightDiv{
+    padding-left: 9px;
+    text-align:left;
+    display:table-cell;
+}
